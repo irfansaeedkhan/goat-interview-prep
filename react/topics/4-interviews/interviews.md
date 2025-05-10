@@ -1,0 +1,1 @@
+Hooks like useState/useEffect allow state and side-effects in function components.

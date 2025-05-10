@@ -1,0 +1,1 @@
+Fetches data at build time for static generation.
