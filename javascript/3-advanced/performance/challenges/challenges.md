@@ -1,1 +1,1 @@
-# Challenges for performance
+# Challenges

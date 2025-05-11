@@ -1,1 +1,1 @@
-# Challenges for modules-bundlers
+# Challenges

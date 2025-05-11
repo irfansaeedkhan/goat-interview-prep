@@ -1,3 +1,2 @@
-# JavaScript → 3 Advanced → Event-Loop
-
-Overview here.
+# Event Loop
+Overview

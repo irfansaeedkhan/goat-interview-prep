@@ -1,0 +1,1 @@
+// Example for modules-bundlers

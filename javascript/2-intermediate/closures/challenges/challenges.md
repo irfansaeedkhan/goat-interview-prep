@@ -1,1 +1,1 @@
-# Challenges for closures
+# Challenges

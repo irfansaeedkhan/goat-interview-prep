@@ -1,65 +1,65 @@
-console.log("this is working 3");
-
-// // examples/arrays.ts
-
-// // 1. Basic Declarations
-// let numbers: number[] = [1, 2, 3, 4, 5];
-// let fruits: string[] = ["apple", "banana", "cherry"];
-// let mixed: Array<number | string> = [1, "apple", 2, "banana"];
-
-// // 2. Mutator Methods (in-place)
-// // These change the original array
-// numbers.push(6); // [1,2,3,4,5,6]
-// numbers.pop(); // [1,2,3,4,5]
-// numbers.unshift(0); // [0,1,2,3,4,5]
-// numbers.shift(); // [1,2,3,4,5]
-// const removed = numbers.splice(2, 1, 99); // numbers = [1,2,99,4,5], removed = [3]
-// numbers.reverse(); // [5,4,99,2,1]
-// numbers.sort((a, b) => a - b); // [1,2,4,5,99]
-
-// // 3. Accessor Methods (non-mutating)
-// // These return a new array/value without altering the original
-// const slicePart = numbers.slice(1, 3); // [2,4]
-// const concatenated = numbers.concat([6, 7]); // [1,2,4,5,99,6,7]
-// const joined = fruits.join(" | "); // "apple | banana | cherry"
-
-// // 4. Iteration & Transformation
-// numbers.forEach((n) => console.log(n)); // logs each number
-// const squares = numbers.map((n) => n * n); // [1,4,16,25,9801]
-// const evens = numbers.filter((n) => n % 2 === 0); // [2,4]
-// const sum = numbers.reduce((acc, n) => acc + n, 0); // sum of all elements
-
-// // 5. Search & Test
-// const has99 = numbers.includes(99); // true
-// const idx = numbers.findIndex((n) => n > 50); // index of first >50
-// const firstBig = numbers.find((n) => n > 50); // 99
-
-// // 6. Flatten & FlatMap
-// const nested = [1, [2, [3, 4]], 5];
-// const flat1 = nested.flat(1); // [1,2,[3,4],5]
-// const flat2 = nested.flat(2); // [1,2,3,4,5]
-// const flatMapped = nested.flatMap((x) => (Array.isArray(x) ? x : [x])); // [1,2,[3,4],5]
-
-// // 7. Creating & Copying
-// const copy1 = [...numbers]; // shallow copy
-// const copy2 = Array.from(numbers); // shallow copy
-// const filled = Array(3).fill(0); // [0,0,0]
-// const sequence = Array.from({ length: 5 }, (_, i) => i + 1); // [1,2,3,4,5]
-
-// // 8. Sparse Arrays
-// const holes = new Array(3); // [ <3 empty items> ]
-// holes.forEach((_, i) => console.log(i)); // nothing logs
-// const filledHoles = holes.fill("a"); // ['a','a','a']
-
-// // 9. Array-Like Objects
-// function exampleArgs(...args: number[]) {
-//   const arr = Array.from(arguments); // convert arguments object
-//   console.log(arr);
-// }
-// exampleArgs(10, 20, 30);
-
+// examples/arrays.ts
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+// 1. Basic Declarations
+var numbers = [1, 2, 3, 4, 5];
+var fruits = ["apple", "banana", "cherry"];
+var mixed = [1, "apple", 2, "banana"];
+// 2. Mutator Methods (in-place)
+// These change the original array
+numbers.push(6); // [1,2,3,4,5,6]
+numbers.pop(); // [1,2,3,4,5]
+numbers.unshift(0); // [0,1,2,3,4,5]
+numbers.shift(); // [1,2,3,4,5]
+var removed = numbers.splice(2, 1, 99); // numbers = [1,2,99,4,5], removed = [3]
+numbers.reverse(); // [5,4,99,2,1]
+numbers.sort(function (a, b) { return a - b; }); // [1,2,4,5,99]
+// 3. Accessor Methods (non-mutating)
+// These return a new array/value without altering the original
+var slicePart = numbers.slice(1, 3); // [2,4]
+var concatenated = numbers.concat([6, 7]); // [1,2,4,5,99,6,7]
+var joined = fruits.join(" | "); // "apple | banana | cherry"
+// 4. Iteration & Transformation
+numbers.forEach(function (n) { return console.log(n); }); // logs each number
+var squares = numbers.map(function (n) { return n * n; }); // [1,4,16,25,9801]
+var evens = numbers.filter(function (n) { return n % 2 === 0; }); // [2,4]
+var sum = numbers.reduce(function (acc, n) { return acc + n; }, 0); // sum of all elements
+// 5. Search & Test
+var has99 = numbers.includes(99); // true
+var idx = numbers.findIndex(function (n) { return n > 50; }); // index of first >50
+var firstBig = numbers.find(function (n) { return n > 50; }); // 99
+// 6. Flatten & FlatMap
+var nested = [1, [2, [3, 4]], 5];
+var flat1 = nested.flat(1); // [1,2,[3,4],5]
+var flat2 = nested.flat(2); // [1,2,3,4,5]
+var flatMapped = nested.flatMap(function (x) { return (Array.isArray(x) ? x : [x]); }); // [1,2,[3,4],5]
+// 7. Creating & Copying
+var copy1 = __spreadArray([], numbers, true); // shallow copy
+var copy2 = Array.from(numbers); // shallow copy
+var filled = Array(3).fill(0); // [0,0,0]
+var sequence = Array.from({ length: 5 }, function (_, i) { return i + 1; }); // [1,2,3,4,5]
+// 8. Sparse Arrays
+var holes = new Array(3); // [ <3 empty items> ]
+holes.forEach(function (_, i) { return console.log(i); }); // nothing logs
+var filledHoles = holes.fill("a"); // ['a','a','a']
+// 9. Array-Like Objects
+function exampleArgs() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var arr = Array.from(arguments); // convert arguments object
+    console.log(arr);
+}
+exampleArgs(10, 20, 30);
 // // Example for arrays
-
 // // 1. Declare an array of numbers
 // let numbers: number[] = [1, 2, 3, 4, 5];
 // // 2. Declare an array of strings
@@ -190,7 +190,6 @@ console.log("this is working 3");
 //     }
 //     )(),
 // ]
-
 // //  generate a random number between 1 and 100
 // function getRandomNumber() {
 //   return Math.floor(Math.random() * 100) + 1;
@@ -219,7 +218,6 @@ console.log("this is working 3");
 //   yield Math.floor(Math.random() * 100) + 1;
 // }
 // )());
-
 // // generate all the functions of arrays like sum some filter all of them
 // function sum(arr: number[]): number {
 //   return arr.reduce((acc, curr) => acc + curr, 0);

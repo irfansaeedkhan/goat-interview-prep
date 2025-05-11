@@ -1,0 +1,1 @@
+// src/examples/closures.ts
